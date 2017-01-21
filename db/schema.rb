@@ -10,11 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170121064328) do
+ActiveRecord::Schema.define(version: 20170121083736) do
 
   create_table "visitors", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "name"
   end
 
 end

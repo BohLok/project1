@@ -1,0 +1,14 @@
+<h3>Visitors index project1</h3>
+
+<h1>All users</h1>
+
+<ul class="visitors">
+  <% @visitors.each do |visitor| %>
+    <li>
+      <%= link_to visitor.name, visitor %> <%= button_to "delete", visitor, :method=>:delete, :class=>:destroy %>
+    </li>
+    <li>
+     
+    </li>
+  <% end %>
+</ul>

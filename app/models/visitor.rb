@@ -1,6 +1,6 @@
 class Visitor < ApplicationRecord
+validates_presence_of :name
 
-def new
-end
+
 
 end
