@@ -38,7 +38,7 @@ def create
 end
 
 def secure_params
-  params.require(:visitor).permit(:name)
+  params.require(:visitor).permit(:name, :email, :password)
 end
 
 end
