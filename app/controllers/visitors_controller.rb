@@ -32,7 +32,7 @@ def create
       redirect_to @visitor
     else
       render 'new'
-    end
+ end
   
   # redirect_to root_path
 end

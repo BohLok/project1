@@ -12,6 +12,10 @@
     
     <h1>Header Project 1</h1>
 
+
+   <% flash.each do |k, v| %>
+      <div id="<%= k %>"><%= v %></div>
+    <% end %>
     
     
 

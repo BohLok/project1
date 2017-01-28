@@ -4,7 +4,9 @@ Rails.application.routes.draw do
 
   get '/login', to: 'session#new'
   get '/signup', to: 'visitors#new'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  
+  post '/login', to: 'session#create'
+  
   
  
   resources :visitors 

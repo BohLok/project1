@@ -1,0 +1,5 @@
+class AddIndexToVisitorEmail < ActiveRecord::Migration[5.0]
+  def change
+    add_index :visitors, :email, unique: true
+  end
+end
