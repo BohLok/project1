@@ -4,7 +4,7 @@ class SessionController < ApplicationController
   
   def create
     @visitor = Visitor.find_by(email: params[:session][:email].downcase)
-    if @visitor 
+    if @visitor && @visitor.authenticate(params[:session][:password])
       flash[:success] = 'Loged in! Welcome!'
       redirect_to @visitor
     else
