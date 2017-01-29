@@ -25,20 +25,17 @@ def new
 end
 
 def create
-  #redirect 
   @visitor = Visitor.new(secure_params)
   if @visitor.save
       flash[:sucess] = "toll"
       redirect_to @visitor
     else
       render 'new'
- end
-  
-  # redirect_to root_path
+  end
 end
 
 def secure_params
-  params.require(:visitor).permit(:name, :email, :password)
+  params.require(:visitor).permit(:name, :email, :password, :password_confirmation)
 end
 
 end
